@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /home/hakeemullah/.cargo/bin:/home/hakeemullah/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/hakeemullah/.foundry/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.15.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://github.com/hugomrdias/concat-stream: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141543:19)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+    "name": "nftairdrop",
+    "license": "UNLICENSED",
+    "scripts": {
+      "codegen": "graph codegen",
+      "build": "graph build",
+      "deploy": "graph deploy --node https://api.thegraph.com/deploy/ hakeemullahjan/nftairdrop",
+      "create-local": "graph create --node http://localhost:8020/ hakeemullahjan/nftairdrop",
+      "remove-local": "graph remove --node http://localhost:8020/ hakeemullahjan/nftairdrop",
+      "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 hakeemullahjan/nftairdrop"
+    },
+    "dependencies": {
+      "@graphprotocol/graph-cli": "0.30.4",
+      "@graphprotocol/graph-ts": "0.27.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
